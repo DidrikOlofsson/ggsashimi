@@ -8,8 +8,9 @@ matrix:
           env: TOXENV=py36
 
 install:
-  - pip install tox
+  - pip install -r requirements.txt
+  - pip install -r requirements.dev.txt
 
 script:
   - tox
-  - source .tox/$TOXENV/bin/activate && bash ci/run.sh
+  - bash ci/run.sh
