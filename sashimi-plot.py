@@ -579,7 +579,7 @@ if __name__ == "__main__":
                 a, junctions = read_bam(bam, args.coordinates, args.strand)
                 if a.keys() == ["+"] and all(map(lambda x: x==0, list(a.values()[0]))):
                         print("ERROR: No reads in the specified area.")
-                        exit(1)
+                        exit(0)
                 for strand in a:
                         # Store junction information
                         if args.junctions_bed:
